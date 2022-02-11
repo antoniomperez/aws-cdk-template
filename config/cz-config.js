@@ -32,7 +32,7 @@ module.exports = {
     { value: 'WIP', name: 'WIP:      Work in progress' },
   ],
 
-  scopes: [{ name: 'AddNewScope' }],
+  scopes: [{ name: 'ChangeMe' }],
 
   allowTicketNumber: true,
   isTicketNumberRequired: false,
