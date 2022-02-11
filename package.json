@@ -9,13 +9,14 @@
     "watch": "tsc -w",
     "test": "jest",
     "cdk": "cdk",
-    "commit": "cz"
+    "commit": "./node_modules/cz-customizable/standalone.js"
   },
   "devDependencies": {
     "@types/jest": "^26.0.10",
     "@types/node": "10.17.27",
     "aws-cdk": "2.12.0",
     "cz-conventional-changelog": "3.3.0",
+    "cz-customizable": "^6.3.0",
     "jest": "^26.4.2",
     "ts-jest": "^26.2.0",
     "ts-node": "^9.0.0",
@@ -27,8 +28,8 @@
     "source-map-support": "^0.5.16"
   },
   "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
+    "cz-customizable": {
+      "config": "config/cz-config.js"
     }
   }
 }
