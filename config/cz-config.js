@@ -35,7 +35,7 @@ module.exports = {
   scopes: [{ name: 'changeMe' }],
 
   allowTicketNumber: true,
-  isTicketNumberRequired: true,
+  isTicketNumberRequired: false,
   ticketNumberPrefix: '#',
   ticketNumberRegExp: '\\d{1,5}',
 
