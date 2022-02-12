@@ -1,6 +1,9 @@
 name: Release Lifecycle
 
 on:
+  push:
+    branches:
+      - 'feature/**'
   pull_request:
     types:
       - opened
@@ -9,7 +12,13 @@ on:
 
 jobs:
   release:
+    name: Release Lifecycle
     runs-on: ubuntu-latest
     steps:
+      - name: Github Action Checkout
+      - uses: actions/checkout@v2
+      - name: Use Node.js
+      - uses: actions/setup-node@v2
+      - name: Release
       - run: echo "Bumping the release .....'"
       - run: yarn release
