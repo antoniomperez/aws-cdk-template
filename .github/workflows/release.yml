@@ -23,8 +23,8 @@ jobs:
         with:
           version: 14
 
-      # - name: Installing packages
-      #   run: yarn install
+      - name: Installing packages
+        run: yarn install
 
       - name: Release
         run: yarn release
