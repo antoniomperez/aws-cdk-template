@@ -20,5 +20,4 @@ jobs:
       - name: Use Node.js
       - uses: actions/setup-node@v2
       - name: Release
-      - run: echo "Bumping the release .....'"
-      - run: yarn release
+        run: yarn release
