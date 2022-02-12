@@ -8,8 +8,7 @@ on:
       - 'feature/**'
 
 jobs:
-  run_if:
-    if: startsWith(github.head_ref, 'feature/')
+  release:
     runs-on: ubuntu-latest
     steps:
       - run: echo "Bumping the release .....'"
