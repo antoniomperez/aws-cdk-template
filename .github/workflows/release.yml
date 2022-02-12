@@ -1,0 +1,16 @@
+name: Release Lifecycle
+
+on:
+  pull_request:
+    types:
+      - opened
+    branches:
+      - 'feature/**'
+
+jobs:
+  run_if:
+    if: startsWith(github.head_ref, 'feature/')
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Bumping the release .....'"
+      - run: yarn release
