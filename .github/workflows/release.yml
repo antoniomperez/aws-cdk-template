@@ -15,9 +15,16 @@ jobs:
     name: Release Lifecycle
     runs-on: ubuntu-latest
     steps:
-      - name: Github Action Checkout
-      - uses: actions/checkout@v2
+      - name: Checkout source code
+        uses: actions/checkout@v2
+
       - name: Use Node.js
-      - uses: actions/setup-node@v2
+        uses: actions/setup-node@v2
+        with:
+          version: 14
+
+      # - name: Installing packages
+      #   run: yarn install
+
       - name: Release
         run: yarn release
