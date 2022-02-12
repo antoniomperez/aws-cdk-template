@@ -1,12 +1,9 @@
 name: Release Lifecycle
 
 on:
-  push:
-    branches:
-      - 'feature/**'
   pull_request:
     types:
-      - opened
+      - closed
     branches:
       - 'feature/**'
 
@@ -20,8 +17,6 @@ jobs:
 
       - name: Use Node.js
         uses: actions/setup-node@v2
-        with:
-          version: 14
 
       - name: Configuring Git user email
         run: git config --global user.email "actions@github.com"
@@ -32,5 +27,8 @@ jobs:
       - name: Installing packages
         run: yarn install
 
-      - name: Release
+      - name: Preparing release
         run: yarn release
+
+      - name: Pushing Release tag
+        run: git push --follow-tags
