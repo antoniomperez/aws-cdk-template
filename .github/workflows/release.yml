@@ -2,8 +2,7 @@ name: Release Lifecycle
 
 on:
   pull_request:
-    types:
-      - closed
+    types: [opened, reopened]
     branches:
       - 'feature/**'
 
@@ -31,4 +30,4 @@ jobs:
         run: yarn release
 
       - name: Pushing Release tag
-        run: git push --follow-tags
+        run: git push --follow-tags origin feature/${GITHUB_REF#refs/heads/}
