@@ -1,6 +1,6 @@
 *.js
 !jest.config.js
-!config/cz-config.js
+!config/**
 *.d.ts
 node_modules
 
