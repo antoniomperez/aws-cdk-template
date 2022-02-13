@@ -3,10 +3,8 @@ name: 'Publish new release'
 on:
   pull_request:
     branches:
-      - 'feature/**'
-      - 'fix/**'
+      - master
     types:
-      - opened
       - closed
 
 jobs:
