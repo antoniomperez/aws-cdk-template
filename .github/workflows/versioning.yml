@@ -6,6 +6,7 @@ on:
       - 'feature/**'
       - 'fix/**'
     types:
+      - opened
       - closed
 
 jobs:
