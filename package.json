@@ -1,6 +1,6 @@
 {
   "name": "aws-cdk-template",
-  "version": "1.1.2-beta.0",
+  "version": "1.5.1-beta.0",
   "bin": {
     "aws-cdk-template": "bin/aws-cdk-template.js"
   },
@@ -11,7 +11,8 @@
     "cdk": "cdk",
     "commit": "./node_modules/cz-customizable/standalone.js",
     "prepare": "husky install",
-    "release": "standard-version"
+    "release": "standard-version",
+    "bump": "./bump.sh"
   },
   "devDependencies": {
     "@types/jest": "^26.0.10",
@@ -24,11 +25,11 @@
     "eslint": "^8.8.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-prettier": "^4.0.0",
     "husky": "^7.0.0",
     "jest": "^26.4.2",
     "lint-staged": "^12.3.3",
     "prettier": "^2.5.1",
-    "standard-version": "^9.3.2",
     "ts-jest": "^26.2.0",
     "ts-node": "^9.0.0",
     "typescript": "~3.9.7"
@@ -36,7 +37,9 @@
   "dependencies": {
     "aws-cdk-lib": "2.12.0",
     "constructs": "^10.0.0",
-    "source-map-support": "^0.5.16"
+    "eslint-config-prettier": "^8.3.0",
+    "source-map-support": "^0.5.16",
+    "standard-version": "^9.3.2"
   },
   "config": {
     "cz-customizable": {
