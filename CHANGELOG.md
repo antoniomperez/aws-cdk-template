@@ -7,8 +7,6 @@ All notable changes to this project will be documented in this file. See [standa
 ### [1.1.2-beta.0](https://github.com/antoniomperez/aws-cdk-template/compare/v1.1.2...v1.1.2-beta.0) (2022-02-13)
 
 ### [1.1.2](https://github.com/antoniomperez/aws-cdk-template/compare/v1.1.1...v1.1.2) (2022-02-13)
-
-
 ### Bug Fixes
 
 * **Github Actions:** [#7](https://github.com/antoniomperez/aws-cdk-template/issues/7) fixed release action on pull request closed ([32803ee](https://github.com/antoniomperez/aws-cdk-template/commit/32803ee5eeb9340e1d0ba17dcc5fe4012600be3e))
