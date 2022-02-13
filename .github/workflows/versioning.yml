@@ -1,15 +1,18 @@
-name: Release Lifecycle
+name: 'Publish new release'
 
 on:
   pull_request:
-    types: [opened, reopened]
     branches:
       - 'feature/**'
+      - 'fix/**'
+    types:
+      - closed
 
 jobs:
   release:
-    name: Release Lifecycle
+    name: Publish new release
     runs-on: ubuntu-latest
+    if: github.event.pull_request.merged == true # only merged pull requests must trigger this job
     steps:
       - name: Checkout source code
         uses: actions/checkout@v2
