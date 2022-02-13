@@ -13,33 +13,35 @@
     "commit": "./node_modules/cz-customizable/standalone.js",
     "prepare": "husky install",
     "release": "standard-version",
-    "bump": "./bump.sh"
+    "bump": "./bump.sh",
+    "ncu": "ncu"
   },
   "devDependencies": {
-    "@types/jest": "^26.0.10",
-    "@types/node": "10.17.27",
+    "@types/jest": "^27.4.0",
+    "@types/node": "17.0.17",
     "@typescript-eslint/eslint-plugin": "^5.11.0",
     "@typescript-eslint/parser": "^5.11.0",
     "aws-cdk": "2.12.0",
     "cz-conventional-changelog": "3.3.0",
     "cz-customizable": "^6.3.0",
-    "eslint": "^8.8.0",
+    "eslint": "^8.9.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.25.4",
     "eslint-plugin-prettier": "^4.0.0",
-    "husky": "^7.0.0",
-    "jest": "^26.4.2",
+    "husky": "^7.0.4",
+    "jest": "^27.5.1",
     "lint-staged": "^12.3.3",
+    "npm-check-updates": "^12.3.0",
     "prettier": "^2.5.1",
-    "ts-jest": "^26.2.0",
-    "ts-node": "^9.0.0",
-    "typescript": "~3.9.7"
+    "ts-jest": "^27.1.3",
+    "ts-node": "^10.5.0",
+    "typescript": "~4.5.5"
   },
   "dependencies": {
     "aws-cdk-lib": "2.12.0",
-    "constructs": "^10.0.0",
+    "constructs": "^10.0.61",
     "eslint-config-prettier": "^8.3.0",
-    "source-map-support": "^0.5.16",
+    "source-map-support": "^0.5.21",
     "standard-version": "^9.3.2"
   },
   "config": {
