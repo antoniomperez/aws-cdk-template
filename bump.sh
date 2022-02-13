@@ -10,11 +10,12 @@
 #
 # If a version is not provided, the 'minor' version will be bumped.
 # The version can be an explicit version _or_ one of:
-# 'major', 'minor', 'patch' or 'prerelease'.
+# 'major', 'minor', 'patch', 'rc' or 'prerelease'.
 #
 # --------------------------------------------------------------------------------------------------
-set -euo pipefail
+
+# set -euo pipefail
 scriptdir=$(cd $(dirname $0) && pwd)
 cd ${scriptdir}
-# yarn install --frozen-lockfile
+#yarn install --frozen-lockfile
 ${scriptdir}/scripts/bump.js ${1:-minor}

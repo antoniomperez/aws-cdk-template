@@ -3,10 +3,10 @@
 const path = require('path');
 const fs = require('fs');
 
-function resolveVersion(rootdir) {
+function resolveVersion(rootDir) {
   const ALLOWED_RELEASE_TYPES = ['stable', 'rc', 'beta', 'alpha'];
 
-  const releaseFile = path.join(rootdir, 'release.json');
+  const releaseFile = path.join(rootDir, 'release.json');
 
   const releaseConfig = require(releaseFile);
   const { releaseType } = releaseConfig;
@@ -27,7 +27,7 @@ function resolveVersion(rootdir) {
   //
 
   const versionFile = 'package.json';
-  const versionFilePath = path.join(rootdir, versionFile);
+  const versionFilePath = path.join(rootDir, 'package.json');
   if (!fs.existsSync(versionFilePath)) {
     throw new Error(`unable to find version file ${versionFile}`);
   }
@@ -37,17 +37,6 @@ function resolveVersion(rootdir) {
   //
   const versions = require(versionFilePath);
   const currentVersion = versions.version;
-
-  // if this is a pre-release, make sure current version includes the
-  // pre-release tag (e.g. "1.0.0-alpha.0"). we allow stable branches to bump to
-  // a pre-release for testing purposes when BUMP_CANDIDATE=true (see bump.js)
-  /*  if (releaseType !== 'stable') {
-    if (!currentVersion.includes(`-${releaseType}`)) {
-      throw new Error(
-        `could not find pre-release tag "${releaseType}" in current version "${currentVersion}"`
-      );
-    }
-  } */
 
   return {
     version: currentVersion,
