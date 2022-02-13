@@ -1,9 +1,10 @@
 {
   "name": "aws-cdk-template",
-  "version": "2.1.0-alpha.0",
+  "version": "2.1.0-alpha.1",
   "bin": {
     "aws-cdk-template": "bin/aws-cdk-template.js"
   },
+  "license": "Apache-2.0",
   "scripts": {
     "build": "tsc",
     "watch": "tsc -w",
