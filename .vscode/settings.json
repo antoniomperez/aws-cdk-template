@@ -5,7 +5,6 @@
   "json.maxItemsComputed": 50000,
   "eslint.format.enable": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.fontFamily": "cascadia code",
   "editor.fontSize": 16,
   "better-comments.highlightPlainText": true,
   "prettier.printWidth": 100,
