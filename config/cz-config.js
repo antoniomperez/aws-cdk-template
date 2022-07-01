@@ -34,7 +34,7 @@ module.exports = {
 
   scopes: [{ name: 'Github Actions' }],
 
-  allowTicketNumber: true,
+  allowTicketNumber: false,
   isTicketNumberRequired: false,
   ticketNumberPrefix: '#',
   ticketNumberRegExp: '\\d{1,5}',
